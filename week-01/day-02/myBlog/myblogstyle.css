@@ -1,0 +1,78 @@
+body{
+    background-color: lightgrey;
+}
+
+
+header {
+    background-color:mistyrose;
+    width: 100%;
+    height: 80px;
+}
+
+.Title {
+    font-size: 35px;
+    position: relative;
+    left: 50px;
+    padding: 20px;
+
+}
+
+p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+main {
+    margin: 15px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+
+.h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.newtitle {
+    border: black solid;
+    border-width: thin;
+    color: linen;
+    width: 400px;
+    height: auto;
+    padding: 5px;
+}
+
+.newpost {
+    border: black solid;
+    border-width: thin;
+    width: 400px;
+    height: auto;
+    padding: 5px;
+}
+
+.button {
+    background-color: linen;
+    border: black solid;
+    border-width: thin;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.post {
+    border: black solid;
+    border-width: thin;
+    padding: 10px;
+    margin:15px;
+    width: 1000px;
+    height: auto;
+    background-color: mistyrose;
+}
+
+.posttitle {
+    font-size: 25px;
+}
