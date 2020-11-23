@@ -9,3 +9,18 @@ if (secondList.length > firstList.length) {
 } else {
     console.log('p2 is not longer');
 }
+
+//Sum elments//
+
+let numbers: number[] = [54, 23, 66, 12];
+console.log(numbers[1] + numbers[2]);
+
+//Swap//
+
+let names: string[] = ['Arthur', 'Boe', 'Chloe'];
+names[0] = names[2];
+names[2] = names[0];
+console.log(names);
+
+
+
