@@ -10,6 +10,3 @@ let arr2 = [3, 4, 5];
 
 arr1 = [...arr1, ...arr2];
 console.log (arr1);
-
-//Array methods//
-console.log(['apple', 'pear','melon'].indexOf('pear'));
