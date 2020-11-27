@@ -4,10 +4,10 @@
 const canvas = document.querySelector('.main-canvas');
 const ctx = canvas.getContext('2d');
 
-ctx.beginPath();
-ctx.moveTo(50, 100);
-ctx.lineTo(300, 200);
-ctx.stroke();
+//ctx.beginPath();
+//ctx.moveTo(50, 100);
+//ctx.lineTo(300, 200);
+//ctx.stroke();
 
 function drawLine (x, y) {
     ctx.beginPath();    
