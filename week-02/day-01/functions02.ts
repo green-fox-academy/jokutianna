@@ -16,4 +16,3 @@ console.log(greet, name);
 }
 greet('Hey');
 greet('Hello', 'Tojás');
-
