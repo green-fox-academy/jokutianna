@@ -10,11 +10,11 @@ export class Person {
     this._gender= gender;
   }
 
-  public introduce(): void{
+  public introduce(): void {
     console.log(`Hi I'm ${this._name}, a ${this._age} year old ${this._gender}.`);
   }
 
-  public getGoal(): void{
+  public getGoal(): void {
     console.log('My goal is: Live for the moment!');
   }
 }

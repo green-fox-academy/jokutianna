@@ -8,11 +8,11 @@ export class Mentor extends Person {
     this._level= level;
   }
 
-  public getGoal(): void{
+  public getGoal(): void {
     console.log('My goal is: Educate brilliant junior software developers.');
   }
 
-  public introduce(): void{
+  public introduce(): void {
     console.log(`Hi, I'm ${this._name}, a ${this._age} years old ${this._gender} ${this._level} mentor.`);
   }
 }

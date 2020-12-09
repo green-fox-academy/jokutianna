@@ -10,16 +10,16 @@ export class Sponsor extends Person {
     this._hiredStudents= hiredStudents;
   }
 
-  public introduce(): void{
+  public introduce(): void {
     console.log(`Hi, I'm ${this._name}, a ${this._age} years old ${this._gender} who represents ${this._company} and hired ${this._hiredStudents} students so far.`);
   }
 
-  public hire(): void{
+  public hire(): void {
     this._hiredStudents= this._hiredStudents ++;
     console.log(this._hiredStudents);
   }
 
-  public getGoal(): void{
+  public getGoal(): void {
     console.log('My goal is: Hire brilliant junior software developers.');
   }
 }
