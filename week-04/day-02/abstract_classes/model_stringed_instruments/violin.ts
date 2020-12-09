@@ -6,7 +6,7 @@ export class Violin extends StringedInstrument {
     super(name, numberOfString);
   }
 
-  public sound(): string{
+  public sound(): string {
     return 'Screech';
   }
 }

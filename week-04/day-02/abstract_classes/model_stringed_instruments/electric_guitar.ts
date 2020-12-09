@@ -6,7 +6,7 @@ export  class ElectricGuitar extends StringedInstrument {
     super(name, numberOfStrings);
   }
 
-  public sound(): string{
+  public sound(): string {
     return 'Twang';
   }
 

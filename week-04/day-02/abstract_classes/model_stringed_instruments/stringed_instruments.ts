@@ -11,7 +11,7 @@ export  abstract class StringedInstrument extends Instrument {
 
   public abstract sound(): void;
 
-  public play(): void{
+  public play(): void {
     console.log(`${this._name}, a ${this._numberOfStrings}-stringed instrument that goes ${this.sound()}`);
   }
 }
