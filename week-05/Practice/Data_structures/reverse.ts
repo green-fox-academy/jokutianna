@@ -5,11 +5,11 @@
 
 let toBeReversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI`;
 
-let toBeReversedArr: string[] = toBeReversed.split("");
-console.log(toBeReversedArr);
+function reverse (string: string):string {
+  let toBeReversedArr: string[] = string.split("");
+  let newArray: string[] = toBeReversedArr.reverse();
+  let finalString: string = newArray.join("");
+  return finalString;
+}
 
-
-
-
-//console.log(reverse(toBeReversed));
-//export = reverse;
+console.log(reverse(toBeReversed));
