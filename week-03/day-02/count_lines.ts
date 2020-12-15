@@ -13,7 +13,7 @@ function countFileNames(filename) {
 }
 
 try{
-    countFileNames(random-file.txt);
+    countFileNames(randomfile.txt);
 }
 catch(e){
     console.log(0);
