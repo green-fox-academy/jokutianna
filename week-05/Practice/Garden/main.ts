@@ -10,3 +10,12 @@ let yellowFlower = new Flower('yellow','flower');
 let blueFlower = new Flower('blue','flower');
 let purpleTree = new Tree('blue','tree');
 let orangeTree = new Tree('orange','tree');
+
+myGarden.addPlant(yellowFlower);
+myGarden.addPlant(blueFlower);
+myGarden.addPlant(purpleTree);
+myGarden.addPlant(orangeTree);
+
+myGarden.getPlants();
+
+myGarden.toString();

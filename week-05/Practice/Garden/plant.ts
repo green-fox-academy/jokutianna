@@ -1,5 +1,7 @@
 'use strict';
 
+import { Garden } from './garden';
+
 export class Plant {
   protected _color: string;
   protected _typeOfPlant: string;
@@ -13,4 +15,7 @@ export class Plant {
     this._absorbtionRate = absorbtionRate;
   }
 
+ public toString(): string {
+   return `There is a ${this._color} ${this._typeOfPlant} in my garden.`;
+ }
 }
