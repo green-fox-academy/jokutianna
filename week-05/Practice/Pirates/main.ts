@@ -14,4 +14,4 @@ console.log(Karcsi.howsItGoingMate());
 let bigShip = new Ship;
 let smallShip = new Ship;
 
-console.log(bigShip.fillShip(Karcsi));
+console.log(bigShip.fillShip());

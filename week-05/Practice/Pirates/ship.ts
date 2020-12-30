@@ -11,9 +11,10 @@ export class Ship {
     this._hasCaptain = hasCaptain;
   }
 
-  public fillShip(pirate: Pirate) {
-    //random number?
-    this._crew.push(pirate);
-    return this._crew.length;
+  public fillShip() {
+    for(let i: number = 0; i < Math.floor(Math.random()*10); i++) {
+      this._crew.push(new Pirate());
+    }
+    return this._crew.length
   }
 }
