@@ -48,4 +48,14 @@ export class Ship {
     this.lastDayOnTheShip();
   }
 
+  getPoorPirates(): string[] {
+    let poorPiratesList: string[] = [];
+
+    poorPiratesList = this._crew.map(pirate => {
+      if (pirate.amountOfGold < 15 && pirate.hasWoodenLeg) {
+        return pirate.name;
+      }
+    });
+    return poorPiratesList;
+  }
 }
