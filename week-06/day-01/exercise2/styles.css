@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  }
+  
+  .container {
+    background-color: yellow;
+    display: flex;
+    width: 800px;
+    height: 400px;
+    justify-content: center;
+  }
+  
+  
+  
+  .purple {
+    z-index: 2;
+    background-color: purple;
+    height: 70px;
+    width: 70px;
+    align-self: center;   
+  }
