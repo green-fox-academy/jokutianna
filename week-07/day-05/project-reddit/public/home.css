@@ -1,0 +1,161 @@
+ * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: lightgrey;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  align-content: center;
+}
+.space {
+  width: 100%;
+  height: 350px;
+}
+
+.title {
+  font-size: 110px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  top: 10%;
+  left: 32%;
+  letter-spacing: 80px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.logo {
+  align-self: center;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  position: absolute;
+  right: 88%;
+  top: 13%;
+}
+
+.big {
+  display: grid;
+  margin: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "main main side"
+  "main main side"
+  "main main side"
+  "main main side"
+
+}
+
+main {
+  grid-area: main;
+  margin: auto;
+  width: 100%;
+}
+
+aside {
+  grid-area: side;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  height: 55px;
+  width: 90%;
+  background-color: white;
+  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  list-style: none;
+  padding-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.sideli {
+  height: 20px;
+  background-color: whitesmoke;
+}
+
+.links {
+text-align: center;
+}
+
+
+.about {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.share {
+  flex: flex-start;
+  font-size: 15px;
+  padding: 10px;
+  background-color: rgb(224, 224, 224);
+}
+.ul {
+  height: 40px;
+  margin: 15px;
+  border-left: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height:350px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.submit {
+  background-color: rgb(16, 168, 214);
+  color:whitesmoke;
+  align-self: center;
+  justify-self: center;
+  align-content: center;
+  text-align: center;
+  height: 35px;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+}
+.submit:hover {
+  background-color: rgb(24, 113, 185);
+}
+
+.delete {
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  text-transform: uppercase;
+}
+
+a {
+  color: rgb(211, 58, 58);
+  text-decoration: none;
+  background-color: rgb(43, 33, 33);
+  padding: 6px;
+  border-radius: 3px;
+  margin: 10px;
+  position: absolute;
+  left: 28%;
+}
+
+a:hover {
+  background-color: black;
+}
