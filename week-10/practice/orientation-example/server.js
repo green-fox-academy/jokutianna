@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static('public'));
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));  //Ez már nem kell mert a fetch post-ol
 
 const conn = mysql.createConnection({
   host: 'localhost',
@@ -50,7 +50,7 @@ app.post('/api/links', (req,res) => {
             console.log(err);
             return;
           }
-          res.status(200).json(rows);
+          res.status(200).json(rows[0]); //[0]mert az array-ből az objectet akarom visszakapni
         });
       });
     }
@@ -71,10 +71,10 @@ app.get('/a/:alias', (req,res) => {
           console.log(err);
           return;
         }
-        res.redirect('/');
+        res.redirect('/'); //url-re kéne redirectelni, új select és rows url-jére redirect
       })
     } else {
-      res.status(404).json(rows);
+      res.status(404).json(rows); //(rows)akkor kell ha respondként objecteket kell visszaküldeni nem csak status code-ot
     }
   });
 });
@@ -93,7 +93,7 @@ app.get('/api/links', (req,res) => {
 app.delete('/api/links/:id', (req,res) => {
   conn.query('SELECT secretCode FROM links WHERE id=?;' [req.params.id], (err,rows) => {
     if(err) {
-      res.status(404).json(err); //ha nincs id akkor nem fut le a query
+      res.status(404).json(err); //ha nincs id akkor nem fut le a query. !!ez mindig 500 és lefut csak üres!!
       console.log(err);
       return;
     } else { //ugye itt már létezik
