@@ -25,7 +25,7 @@ conn.connect((err) => {
 
 app.get('/', (req,res) => {
   res.sendFile(__dirname + '/public/homepage.html');
-})
+});
 
 app.post('/api/links', (req,res) => {
   let secretcode = Math.floor((Math.random()*10000)+1);
@@ -51,8 +51,30 @@ app.post('/api/links', (req,res) => {
             return;
           }
           res.status(200).json(rows);
-        })
+        });
+      });
+    }
+  });
+});
+
+app.get('/a/:alias', (req,res) => {
+  conn.query('SELECT alias FROM links WHERE alias=?;', [req.params.alias], (err,rows) => {
+    if(err) {
+      res.status(500).json(err);
+      console.log(err);
+      return;
+    }
+    if(rows.length === 1){ //vagyis ha már van ilyen alias...
+      conn.query('UPDATE links SET hitCount = hitCount + 1 WHERE alias=?;', [req.params.alias], (err,rows) => {
+        if(err) {
+          res.status(500).json(err);
+          console.log(err);
+          return;
+        }
+        res.redirect('/');
       })
+    } else {
+      res.status(404).json();
     }
   })
 })
