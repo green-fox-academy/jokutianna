@@ -74,11 +74,40 @@ app.get('/a/:alias', (req,res) => {
         res.redirect('/');
       })
     } else {
-      res.status(404).json();
+      res.status(404).json(rows);
+    }
+  });
+});
+
+app.get('/api/links', (req,res) => {
+  conn.query('SELECT id, url, alias, hitCount FROM links;', (err,rows) => {
+    if(err) {
+      res.status(500).json(err);
+      console.log(err);
+      return;
+    }
+    res.status(200).json(rows);
+  });
+});
+
+app.delete('/api/links/:id', (req,res) => {
+  conn.query('SELECT secretCode FROM links WHERE id=?;' [req.params.id], (err,rows) => {
+    if(err) {
+      res.status(404).json(err); //ha nincs id akkor nem fut le a query
+      console.log(err);
+      return;
+    } else { //ugye itt már létezik
+      conn.query('DELETE FROM links WHERE secretCode=?;', [req.body.secretCode.value], (err,rows) => {
+        if(err) {
+          res.status(403).json(err);
+          console.log(err);
+          return;
+        }
+        res.status(204).json(rows);
+      })
     }
   })
 })
-
 
 
 app.listen(3000);
