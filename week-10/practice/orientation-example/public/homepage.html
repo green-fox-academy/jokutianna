@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL aliaser</title>
+  <link href="style.css" rel="stylesheet" type='text/css'>
+</head>
+
+<body>
+  
+
+<div class='container'>
+
+  <h1 class="message"></h1>
+
+  <form action='/posts' method='post'>
+
+    <div class='url'>
+      <label for='url'>URL</label>
+      <input type='text' id='url' name='url' required>
+    </div>
+
+    <div class='alias'>
+      <label for='alias'>Alias</label>
+      <input type='text' id='alias' name='alias' required>
+    </div>
+    
+    <button type='submit'>SUBMIT</button>
+
+  </form>
+
+</div>
+
+  <script src='index.js'></script>
+</body>
+</html>
